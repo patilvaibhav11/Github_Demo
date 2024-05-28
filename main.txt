@@ -1,3 +1,21 @@
 1. Vaibhav:  1-pen , 2-pencils, 3-Sharpner -- Which i puttining into Compass(Main)
 
 2. Harsh: 4-pen , 5-pencils, 7-Sharpner -- Which i puttining into Compass(Harsh)
+
+this code is not working 
+
+
+Please use below code 
+
+function downloadPDF() {
+    const content = document.getElementById('content');
+    const pdf = new jsPDF('p', 'pt', 'a4');
+
+    pdf.html(content, {
+        callback: function (pdf) {
+            pdf.save('document.pdf');
+        },
+        x: 20,
+        y: 20
+    });
+}
